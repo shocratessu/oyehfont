@@ -587,10 +587,10 @@ a img{
 /*如果你要改那個底線的樣式，改在這裡*/
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after{
   background-color: white !important;
-  bottom: -20px;
-  padding-top:5px;
+  height: 5px !important;
+  bottom: -10px !important;
 }
 /*要這樣，才有辦法讓那條線下面一點*/
-.mdl-tabs__tab *{
-  overflow: visible;
+.mdl-tabs  * {
+  overflow: visible !important;
 }
