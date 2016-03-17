@@ -579,7 +579,18 @@ a img{
 }
 
 /* Radian */
-.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple ,
+
+/*他有個漣漪效果，你有觀察到的話你就知道這在幹嘛了*/
+.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
+  background-color: white !important;
+}
+/*如果你要改那個底線的樣式，改在這裡*/
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after{
   background-color: white !important;
+  bottom: -20px;
+  padding-top:5px;
+}
+/*要這樣，才有辦法讓那條線下面一點*/
+.mdl-tabs__tab *{
+  overflow: visible;
 }
