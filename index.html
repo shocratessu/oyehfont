@@ -17,12 +17,12 @@
 -->
 
 <html lang="zh-Hant">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="葉書：找回書信時代的真璞情性">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>葉書：找回書信時代的真璞情性</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="葉書：找回書信時代的真璞情性">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>葉書：找回書信時代的真璞情性</title>
 
     <!--[if lt IE 9]>
     <script>
@@ -32,21 +32,38 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.light_green-orange.min.css" />
-    <style>
-    #buy-now {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.grey-amber.min.css">
+    <script defer src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+
+    <link href='//fonts.googleapis.com/css?family=Volkhov:400|PT+Serif:400|Volkhov:700' rel='stylesheet' type='text/css'><script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-40904.js"></script>
+
+    <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+
+  $(".font-preview-section-1,.font-preview-section-2,.font-preview-section-3").blur(function(){
+    var flag = false;
+    if(flag && !$(this).text()){
+      flag = false;
+      $(this).text("葉書──找回書信時代的真璞情性");
+      return;
     }
-    </style>
+    
+      if($(this).text().length > 1000){
+        return;
+      }else{
+        _jf.flush();
+      }
+    
+        
+  });
+  
+});
+    </script>
   </head>
   <body>
 
@@ -54,10 +71,10 @@
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
 
-      <div class="oyeh-header mdl-layout__header">
+      <div class="oyeh-header mdl-layout__header mdl-layout--fixed-header">
         <div class="mdl-layout__header-row">
           <span class="oyeh-title mdl-layout-title">
-            葉書：找回書信時代的真璞情性
+            <img alt="葉書 O'Yeh Font" src="images/logo.png" style="width:120px;">
           </span>
           <div class="oyeh-header-spacer mdl-layout-spacer"></div>
           <!-- Navigation -->
@@ -69,185 +86,207 @@
           </div>
         </div>
       </div>
-      <div class="oyeh-drawer mdl-layout__drawer">
-        <span class="mdl-layout-title">
-          葉書
-        </span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="buy-now.html">立刻預購</a>
-          <a class="mdl-navigation__link" href="q-a.html">常見問題</a>
-        </nav>
-      </div>
 
       <div class="android-content mdl-layout__content">
 
         <!-- This is the video part. -->
 
-        <div class="oyeh-video mdl-typography--text-center">
-          <video controls  muted autoplay poster="images/Typer/Snapshots/Typer.jpg" class="fullscreen-bg__video">
-            <source src="images/Typer/WEBM/Typer.webm" type="video/webm">
-            <source src="images/Typer/MP4/Typer.mp4" type="video/mp4">
-            <source src="images/Typer/OGV/Typer.ogv" type="video/ogg">
+        <div class="banner">
+          <video id="header-video" height="100%" controls="controls" preload="true" muted>
+            <source src="images/header.mp4" type="video/mp4">
           </video>
+          <img class="header-visual" src="images/visual.png">
         </div>
-
-        <!-- This is the news part. -->
-
+        <script>
+          var video = document.getElementById("header-video");
+          video.addEventListener("canplay", function() {
+            setTimeout(function() {
+              video.play();
+            }, 100);
+          });
+          var x = document.getElementById("header-video");
+          function enableLoop() { 
+            x.loop = true;
+            x.load();
+          };
+          var myVideo = document.getElementById('header-video');
+            if (typeof myVideo.loop == 'boolean') { // loop supported
+            myVideo.loop = true;
+          } else { // loop property not supported
+            myVideo.addEventListener('ended', function () {
+              this.currentTime = 0;
+              this.play();
+            }, false);
+          }
+          myVideo.play();
+        </script>
         <div class="oyeh-news mdl-typography--text-center">
-          <div class="logo-font oyeh-sub-slogan">預購獨享真誠優惠：</div>
-          <div class="logo-font oyeh-slogan">只要 NT$2480 就能全數擁有！</div>
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-              <img src="images/lamysafari.png" style="width:100%">葉書通用授權一份</div>
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-              <img src="images/lamysafari.png" style="width:100%">LAMY SAFARI F尖</div>
-            <div class="dl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-              <img src="images/lamysafari.png" style="width:100%">鋼筆行書體教學別冊</div>
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-              <img src="images/lamysafari.png" style="width:100%">葉曄親筆簽名明信片</div>
+          <div class="logo-font oyeh-sub-slogan">
+            <hr size="0.3" width="25px" color="#C69C6D"style="margin:auto; margin-bottom:20px;">
+            預購獨享
+            <hr size="0.3" width="25px" color="#C69C6D"style="margin:auto; margin-top:20px;">
           </div>
+          <div class="products mdl-grid">
+            <div class="product mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <img src="images/product-1.png" style="width:100%">
+              <span class="product-title">
+                葉書通用授權一套
+              </span>
+            </div>
+            <div class="product mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <img src="images/product-2.png" style="width:100%">
+              <span class="product-title">
+                LAMY SAFARI F尖
+              </span>
+            </div>
+            <div class="product mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <img src="images/product-3.png" style="width:100%">
+              <span class="product-title">
+                葉曄鋼筆行書教學手冊
+              </span>
+            </div>
+            <div class="product mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <img src="images/product-4.png" style="width:100%">
+              <span class="product-title">
+                葉曄親筆簽名明信片
+              </span>
+            </div>
+          </div>
+          <div class="logo-font oyeh-slogan" style="padding-top: 50px;">只要 NT$2480 就能全數擁有！</div>
         </div>
 
         <!-- This is the story part -->
 
-        <div class="oyeh-story mdl-typography--text-center">
-          <a name="screens"></a>
-          <div class="mdl-typography--display-1-color-contrast">關於葉書</div>
-            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-              <div class="mdl-tabs__tab-bar">
-                <a href="#story-one"  class="mdl-tabs__tab is-active">葉曄：潛心琢磨，終成一家</a>
-                <a href="#story-two" class="mdl-tabs__tab">手寫字型：一段重新認識自己的歷程</a>
-              </div>
-              <div class="story-content mdl-tabs__panel is-active mdl-typography--text-left" id="story-one">
-                <div class="mdl-grid">
-                  <div class="mdl-cell mdl-cell--8-col">
-                    <img src="images/ethan.jpg" style="width:100%">
-                  </div>
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
-                    <p>葉曄在國中時曾被同學嘲笑字很醜，為了擺脫這樣的陰影，葉曄自那時開始發奮圖強練字。</p>
-                    <p>上大學後，祖父的祖傳鋼筆讓他進入了鋼筆的世界。透過鋼筆，葉曄更能揣摩中國傳統書法的粗細變化，這讓他開始潛心研究如何寫好鋼筆字。在經過多年苦練並拜師學習後，葉曄逐漸走出自己獨特的風格，並贏得不少鋼筆字比賽冠軍。</p>
-                    <p>在習字的路上，他發現寫一手好字是可以感動、進而影響他人的。在朋友的極力勸說之下，葉曄決定透過寫書與製作專業的手寫字型，與更多人分享習字所得。</p>
-                  </div>
-                </div>
-              </div>
-              <div class="story-content mdl-tabs__panel" id="story-two">
-                <p>平時書寫通常是抄寫一段文句，揮筆過程中，閱讀也同步進行，筆畫隨著意識有意涵的流動；然而撰寫製作成字型的稿紙，對葉曄而言卻是完全另一回事。為了讓常用字都能被收錄在這套字型中，字集的順序依照使用字頻高低排列後，整理出了一萬字共一百頁的稿紙。平常要寫一百個字不是什麼難事，但想到未來每一筆每一劃都會被忠實地呈現在電腦中，就讓葉曄更加求好心切，希望以更高的標準看待每一個字。</p>
-                <p>這套字是以鋼筆書寫，並透過鋼筆的特性，展現行書的力與美。為了讓每個字都能有最佳的表情和動感，葉曄的稿紙充滿了不斷重寫的痕跡：同一個字寫了三行甚至五行，才有辦法挑出一個葉曄滿意的字。一份一百頁的稿紙交到葉曄的手上，全套寫完時已經逼近兩百頁──葉曄足足寫了一倍的字量，只為了能讓這套字型有最好的效果。</p>
-                <p>漫長的書寫歷程，就是趟重新認識自己的路途。葉曄在書寫這套字時常常感到痛苦，因為這讓他想起了過去準備美術系考試的記憶。原本自己熱愛的事情，因為需要高強度的練習與準備，反而快樂會在無意間被逐漸消磨。把字寫好一點都不容易。腦中自然有畫面，這是習字者的素養。然而，要精確地落實，必須讓身體肌肉透過一次次練習，記憶哪裡該輕，哪裡又該重。真正寫過才算數，手腦缺一不可。有時候壓力過大，手反而會因為緊張導致難以控制，無論重寫幾十遍，那個字就是寫不好。</p>
-                <p>這個時候葉曄會選擇放下鋼筆，離開書桌，去做一些完全無關的事情。當人過度沈浸在單一氛圍中，很容易出現盲點；唯有跳脫現況，才有機會突破困境。看書、散步、甚至直接大睡一場，當葉曄再度回到書桌前，心境緩和了下來、得失心也被悄悄放下；重新審視舊字，再度提筆，原本跨不過的關卡似乎輕易地迎刃而解。</p>
-                <p>「透過不斷書寫、不斷調整自己、並且與自己對話，我又重新了認識自己。」</p>
+        <div class="oyeh-story mdl-grid">
+          <div class="empty mdl-cell--2-col"></div>
+          <div class="section-title mdl-cell--2-col">
+            <p style="font-size:4em; line-height:0.8; color:white; font-weight: 600;">關</p>
+            <p style="font-size:4em; line-height:0.8; color:white; font-weight: 600;">於</p>
+            <p style="font-size:4em; line-height:0.8; color:white; font-weight: 600;">葉</p>
+            <p style="font-size:4em; line-height:0.8; color:white; padding-bottom:20px; font-weight: 600;">書</p>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="btnClick-1">
+              <input type="radio" id="btnClick-1" class="mdl-radio__button" name="options" value="1" checked>
+              <span class="mdl-radio__label"></span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="btnClick-2">
+              <input type="radio" id="btnClick-2" class="mdl-radio__button" name="options" value="2">
+              <span class="mdl-radio__label"></span>
+            </label>
+            <script type="text/javascript">
+              $('#btnClick-1').on('click',function(){
+                $('#story-two').hide();
+                $('#story-one').show();
+              });
+              $('#btnClick-2').on('click',function(){
+                $('#story-one').hide();
+                $('#story-two').show();
+              });
+            </script>
+            <!-- 切換故事段落 -->
+          </div>
+          <div class="story-part mdl-cell--6-col mdl-cell--8-col-tablet">
+            <div style="padding-bottom:50px;"><img src="images/skewed-line.png" style="float: right;"></div>
+            <div class="story-content mdl-grid" id="story-one">
+              <div class="mdl-cell mdl-cell--12-col">
+                <p class="story-title" style="font-size: 18pt; text-align: right;">葉曄：潛心琢磨，終成一家</p>
+                <p style="line-height: 35pt; font-size: 12.5pt;">葉曄在國中時曾被同學嘲笑字很醜，為了擺脫這樣的陰影，葉曄自那時開始發奮圖強練字。</p>
+                <p style="line-height: 35pt; font-size: 12.5pt;">上大學後，祖父的祖傳鋼筆讓他進入了鋼筆的世界。透過鋼筆，葉曄更能揣摩中國傳統書法的粗細變化，這讓他開始潛心研究如何寫好鋼筆字。在經過多年苦練並拜師學習後，葉曄逐漸走出自己獨特的風格，並贏得不少鋼筆字比賽冠軍。</p>
+                <p style="line-height: 35pt; font-size: 12.5pt;">在習字的路上，他發現寫一手好字是可以感動、進而影響他人的。在朋友的極力勸說之下，葉曄決定透過寫書與製作專業的手寫字型，與更多人分享習字所得。</p>
               </div>
             </div>
-        </div>
-
-        <!-- This is the feature part. -->
-
-        <div class="android-wear-section-one">
-          <div class="mdl-typography--display-1-color-contrast mdl-typography--text-center">葉書特色</div>
-          <div class="feature-content">
-            <p>以行書為基底的葉書，最大特色即是筆畫間連筆的氣勢。若隱若現、恰有似無，在墨與白的交互作用下，每個筆畫就像流動的能量，在文字中竄動。</p>
+            <div class="story-content mdl-grid" id="story-two" style="display:none;">
+              <div class="mdl-cell mdl-cell--12-col">
+                <p class="story-title" style="font-size: 18pt; text-align: right;">手寫字型：一段重新認識自己的歷程</p>
+                <p style="line-height: 35pt; font-size: 12.5pt;">這套字是以鋼筆書寫，並透過鋼筆的特性，展現行書的力與美。為了讓每個字都能有最佳的表情和動感，葉曄的稿紙充滿了不斷重寫的痕跡。</p>
+                <p style="line-height: 35pt; font-size: 12.5pt;">漫長的書寫歷程，就是趟重新認識自己的路途。在寫稿紙的過程，有時候壓力過大，手反而會因為緊張導致難以控制，無論重寫幾十遍，那個字就是寫不好。當人過度沈浸在單一氛圍中，很容易出現盲點；唯有跳脫現況，才有機會突破困境。這個時候葉曄會選擇放下鋼筆，離開書桌，去做一些完全無關的事情。當葉曄心境緩和了下來、得失心也被悄悄放下；再度提筆，原本跨不過的關卡似乎輕易地迎刃而解。</p>
+                <p style="line-height: 35pt; font-size: 12.5pt;">「透過不斷書寫、不斷調整自己、並且與自己對話，我又重新了認識自己。」</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="android-wear-section-two">
-          <div class="feature-content">
-            <p>與一般電腦字型強調穩健平衡的骨架不同，葉曄在書寫《葉書》時特別保留了手寫字中靈活與連動的樣貌。細看葉書的筆畫，可以察覺有些豎的角度並非完全垂直，微小的差別創造的動態，但整體看起來卻又和諧平衡。</p>
+        <!-- This is the feature part. -->
+
+        <div class="oyeh-feature mdl-typography--text-center">
+          <div class="logo-font oyeh-sub-slogan">
+            <hr size="0.3" width="25px" color="#C69C6D"style="margin:auto; margin-bottom:20px;">
+            葉書特色
+            <hr size="0.3" width="25px" color="#C69C6D"style="margin:auto; margin-top:20px;">
+          </div>
+          <div class="features-flow">
+            <div class="feature">
+              <img class="first feature-image" src="images/f-1-1.png" alt=""/>
+              <img class="feature-image" src="images/f-1-2.png" alt=""/>
+              <img class="feature-image" src="images/f-1-3.png" alt=""/>
+              <img class="feature-image" src="images/f-1-4.png" alt=""/>
+              <img class="feature-image" src="images/f-1-5.png" alt=""/>
+              <img class="feature-image" src="images/f-1-6.png" alt=""/>
+              <img class="feature-image" src="images/f-1-1.png" alt=""/>
+              <img class="feature-image" src="images/f-1-2.png" alt=""/>
+              <img class="feature-image" src="images/f-1-3.png" alt=""/>
+              <img class="feature-image" src="images/f-1-4.png" alt=""/>
+              <img class="feature-image" src="images/f-1-5.png" alt=""/>
+            </div>
+          </div>
+          <div class="logo-font oyeh-slogan">
+            筆勢連貫
+            <hr size="0.3" width="25px" color="#C69C6D"style="margin:auto; margin-top:20px;">
+          </div>
+          <div class="feature-discription">
+            <p style="font-size: 11pt; color: #C69C6D;">以行書為基底的葉書，最大特色即是筆畫間連筆的氣勢。</p>
+            <p style="font-size: 11pt; color: #C69C6D; padding-bottom: 50px;">若隱若現、恰有似無，在墨與白的交互作用下，每個筆畫就像流動的能量，在文字中竄動。</p>
+          </div>
+          <div class="features-flow">
+            <div class="feature">
+              <img class="first feature-image" src="images/f-2-0.png" alt=""/>
+              <img class="feature-image" src="images/f-2-1.png" alt=""/>
+              <img class="feature-image" src="images/f-2-2.png" alt=""/>
+              <img class="feature-image" src="images/f-2-3.png" alt=""/>
+              <img class="feature-image" src="images/f-2-4.png" alt=""/>
+              <img class="feature-image" src="images/f-2-5.png" alt=""/>
+              <img class="feature-image" src="images/f-2-0.png" alt=""/>
+              <img class="feature-image" src="images/f-2-1.png" alt=""/>
+              <img class="feature-image" src="images/f-2-2.png" alt=""/>
+              <img class="feature-image" src="images/f-2-3.png" alt=""/>
+              <img class="feature-image" src="images/f-2-4.png" alt=""/>
+              <img class="feature-image" src="images/f-2-5.png" alt=""/>
+            </div>
+          </div>
+          <div class="logo-font oyeh-slogan">
+            間架靈活
+            <hr size="0.3" width="25px" color="#C69C6D"style="margin:auto; margin-top:20px;">
+          </div>
+          <div class="feature-discription">
+            <p style="font-size: 11pt; color: #C69C6D;">與一般電腦字型強調穩健平衡的骨架不同，葉曄在書寫「葉書」時特別保留了手寫字中靈活與連動的樣貌。</p>
+            <p style="font-size: 11pt; color: #C69C6D; padding-bottom: 150px;">細看葉書的筆畫，可以察覺有些豎的角度並非完全垂直，微小的差別創造的動態，但整體看起來卻又和諧平衡。</p>
           </div>
         </div>
 
         <!-- This is the font preview part. -->
-
-        <div class="container mdl-grid">
-          <div class="configure mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
-            <div>
-              <label>font-size:</label>
-              <input type="text" id="size" value="65%, 10px, 82%, 13px, 90%, 14px, 100%, 16px, 115%, 18px, 125%, 20px, 150%, 24px">
-            </div>
-            <div>
-              <label>font-family:</label>
-              <input type="text" id="family" value="sans-serif">
-            </div>
-            <div>
-              <label>line-height:</label>
-              <input type="text" id="height" value="1.4">
-            </div>
-            <div>
-              <label>letter-spacing:</label>
-              <input type="text" id="spacing" value="">
-            </div>
-            <div>
-              <label>Preview Text:</label>
-              <textarea id="text">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue hendrerit aliquam. Sed ornare enim sit amet risus vulputate quis facilisis odio consequat.
-              123456789&lt;&gt;/?\_!&quot;#$%&amp;'()-=^~@`[]{};+:*</textarea>
-            </div>
-            <div><button type="button" id="submit">Update</button></div>
+        <div class="font-preview">
+          <div class="logo-font oyeh-sub-slogan mdl-typography--text-center" style="-webkit-transform: skew(0deg, 0deg); transform: skew(0deg, 0deg); color: white;">
+            <hr size="0.3" width="25px" color="white"style="margin:auto; margin-bottom:20px;">
+            字型預覽
+            <hr size="0.3" width="25px" color="white"style="margin:auto; margin-top:20px;">
           </div>
-          <div id="preview"></div>
-          <script type="text/x-handlebars-template" id="fontPreviewTemplate">
-            {{#each sizes}}
-              {{#if this}}
-                <div class="box" style="font-size: {{this}}; font-family: {{../../family}}; line-height: {{../../height}}; letter-spacing: {{../../spacing}}"><p><b>font-size: {{this}};</b></p><p>{{{../../text}}}</p><p><b>{{{../../text}}}</b></p></div>
-              {{/if}}
-            {{/each}}
-          </script>
+          <div class="feature-discription mdl-typography--text-center" style="font-size: 11pt; color: white; -webkit-transform: skew(0deg, 0deg); transform: skew(0deg, 0deg); margin-bottom: 30px;">請點選以下文字段落，並輸入文字，即可測試葉書效果。
+          </div>
+          <div class="size-preview">
+            <div class="font-preview-section-1" contenteditable="true">
+              葉書──找回書信時代的真璞情性
+            </div>
+            <div class="font-preview-section-2" contenteditable="true">
+              能影響他人的，都不只是自己的事
+            </div>
+            <div class="font-preview-section-3" contenteditable="true">
+              從國中至今行文二十年，書寫對葉曄來說早已不只是一種溝通工具，更是磨練自己、陶冶身心的方式；起筆收筆之間，葉曄在其中找到了自己。「寫好字可以是一個人的事，但是當我發現寫出來的字句可以感動人、激勵人時，我知道：寫字不再是個人的事，而可以是大家的事。」在與他人分享自己的墨跡時所獲得的正面回饋，讓他逐漸將寫字視為一種使命。
+            </div>
+          </div>
         </div>
-        <script src="js/jquery-1.8.1.min.js"></script>
-        <script src="js/handlebars-1.0.0.beta.6.js"></script>
-        <script src="js/font-preview.js"></script>
+
 
         <!-- This is the footer part. -->
 
-        <footer class="android-footer mdl-mega-footer">
-          <div class="mdl-mega-footer--top-section">
-            <div class="mdl-mega-footer--left-section">
-              <button class="mdl-mega-footer--social-btn"></button>
-              &nbsp;
-              <button class="mdl-mega-footer--social-btn"></button>
-              &nbsp;
-              <button class="mdl-mega-footer--social-btn"></button>
-            </div>
-            <div class="mdl-mega-footer--right-section">
-              <a class="mdl-typography--font-light" href="#top">
-                Back to Top
-                <i class="material-icons">expand_less</i>
-              </a>
-            </div>
-          </div>
-
-          <div class="mdl-mega-footer--middle-section">
-            <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
-            <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
-          </div>
-
-          <div class="mdl-mega-footer--bottom-section">
-            <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
-              Versions
-              <i class="material-icons">arrow_drop_up</i>
-            </a>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-              <li class="mdl-menu__item">5.0 Lollipop</li>
-              <li class="mdl-menu__item">4.4 KitKat</li>
-              <li class="mdl-menu__item">4.3 Jelly Bean</li>
-              <li class="mdl-menu__item">Android History</li>
-            </ul>
-            <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
-              For Developers
-              <i class="material-icons">arrow_drop_up</i>
-            </a>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-              <li class="mdl-menu__item">App developer resources</li>
-              <li class="mdl-menu__item">Android Open Source Project</li>
-              <li class="mdl-menu__item">Android SDK</li>
-              <li class="mdl-menu__item">Android for Work</li>
-            </ul>
-            <a class="android-link mdl-typography--font-light" href="">Blog</a>
-            <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
-          </div>
-
-        </footer>
       </div>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/master/templates/android-dot-com/" target="_blank" id="buy-now" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">現在立刻預購</a>
-    <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
   </body>
-</html>
+  </html>
