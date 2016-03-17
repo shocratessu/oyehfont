@@ -577,3 +577,9 @@ a img{
   color: #C69C6D;
   border: 1px solid #C69C6D;
 }
+
+/* Radian */
+.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple ,
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after{
+  background-color: white !important;
+}
